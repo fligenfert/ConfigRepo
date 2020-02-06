@@ -1,24 +1,24 @@
-spring
- h2
-  console
+spring:
+ h2:
+  console:
    enabled: true
    path: /h2-console
- jpa
+ jpa:
   show-sql: true
-  hibernate
+  hibernate:
    ddl-auto: create-drop
- datasource
+ datasource:
   url: jdbc:h2:mem:confDb
   username: sa
   password: 
   driver-class-name: org.h2.Driver
   sqlScriptEncoding: UTF-8
- profiles
+ profiles:
   active: jdbc
- cloud
-  config
-   server
-    jdbc
+ cloud:
+  config:
+   server:
+    jdbc:
      sql: SELECT key, value FROM properties WHERE application=? AND profile=? AND (label=? OR label='common');
      order=1
     default-profile: DES
@@ -28,23 +28,23 @@ spring
 # Data Rest 		--> TODO: NO FUNCIONA INVESTIGAR
 #spring.data.rest.base-path: /api
 
-health
- config
+health:
+ config:
   enabled: false
 
 # Configuración general
-config
- general
+config:
+ general:
   pagesize: 10
- endpoint
+ endpoint:
   backautenticacion: http://localhost:9020
 
 #Configuraciones de seguridad
-security
- basic
+security:
+ basic:
   enabled: false
- oauth2
-  client
+ oauth2:
+  client:
    clientId: fooClientId
    clientSecret: secret
    accessTokenUri: http://localhost:9020/auth/oauth/token
