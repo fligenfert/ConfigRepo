@@ -37,7 +37,7 @@ config:
  general:
   pagesize: 10
  endpoint:
-  backautenticacion: http://localhost:90201
+  backautenticacion: http://localhost:9020
 
 #Configuraciones de seguridad
 security:
