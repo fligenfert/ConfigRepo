@@ -50,3 +50,7 @@ security:
    accessTokenUri: http://localhost:9020/auth/oauth/token
    userAuthorizationUri: http://localhost:9020/auth/oauth/authorize
   resource.userInfoUri: http://localhost:9020/auth/user/me
+ 
+# HTTP Server
+server:
+  port: 8888
