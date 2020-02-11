@@ -24,6 +24,11 @@ spring:
     default-profile: DES
     default-application-name: STO
     default-label: CONF
+ rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest   
 
 # Data Rest 		--> TODO: NO FUNCIONA INVESTIGAR
 #spring.data.rest.base-path: /api
