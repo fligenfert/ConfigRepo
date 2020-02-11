@@ -14,7 +14,7 @@ spring:
   driver-class-name: org.h2.Driver
   sqlScriptEncoding: UTF-8
  profiles:
-  active: des, jdbc
+  active: des
  cloud:
   config:
    server:
@@ -78,7 +78,7 @@ spring:
   driver-class-name: org.h2.Driver
   sqlScriptEncoding: UTF-8
  profiles:
-  active: pre, jdbc
+  active: pre
  cloud:
   config:
    server:
