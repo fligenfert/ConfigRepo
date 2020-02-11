@@ -13,8 +13,7 @@ spring:
   password: 
   driver-class-name: org.h2.Driver
   sqlScriptEncoding: UTF-8
- profiles:
-  active: des
+ profiles: des, jdbc
  cloud:
   config:
    server:
@@ -77,8 +76,7 @@ spring:
   password: 
   driver-class-name: org.h2.Driver
   sqlScriptEncoding: UTF-8
- profiles:
-  active: pre
+ profiles: pre, jdbc
  cloud:
   config:
    server:
