@@ -64,7 +64,7 @@ server:
 ---
 
 spring:
- profiles: des
+ profiles: pre
  h2:
   console:
    enabled: true
