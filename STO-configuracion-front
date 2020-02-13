@@ -1,0 +1,23 @@
+server:
+ port: 8889
+ servlet:
+  context-path: /
+ session:
+  cookie:
+   name: UISESSION
+   
+config:
+ endpoint:
+  backconfiguracion: http://localhost:8888/propiedades
+  
+refresh:
+ endpoint:
+  administracion:
+   back: http://localhost:8080/actuator/refresh
+   front: http://localhost:8083/actuator/refresh
+  autenticacion:
+   back: http://localhost:9020/auth/actuator/refresh
+   front: http://localhost:8082/actuator/refresh
+  configuracion:
+   back: http://localhost:8888/actuator/refresh
+   front: http://localhost:8889/actuator/refresh
