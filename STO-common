@@ -1,0 +1,28 @@
+spring:
+ profiles: des
+ datasource:
+  sqlScriptEncoding: UTF-8
+ 
+#Configuraciones de seguridad
+security:
+ basic:
+  enabled: false
+ oauth2:
+  client:
+   clientId: fooClientId
+   clientSecret: secret
+   accessTokenUri: http://localhost:9020/auth/oauth/token
+   userAuthorizationUri: http://localhost:9020/auth/oauth/authorize
+  resource.userInfoUri: http://localhost:9020/auth/user/me
+  
+server:
+ error:
+  include-stacktrace: never
+  
+config:
+ endpoint:
+  backautenticacion: http://localhost:9020
+  backadministracion: http://localhost:8080
+  frontadministracion: http://localhost:8083
+  frontautenticacion: http://localhost:8082
+  frontconfiguracion: http://localhost:8889
