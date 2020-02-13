@@ -1,0 +1,16 @@
+server:
+ port: 9020
+ servlet:
+  context-path: /auth
+  
+jwt:
+ autenticacion:
+  clientid: fooClientId
+  clientsecret: $2a$10$O7WxkTdgBI7IWDh9.7nqOOam5wcTnE8G9Beyd.XCRBH4r/DmOuMjC
+  accessTokenValidititySeconds: 43199
+  authorizedGrantTypes: password,authorization_code,refresh_token
+  refreshTokenValiditySeconds: 2592000
+  
+config:
+ rest:
+  pathusuarioslogin: /usuarios/usuario/login/
