@@ -18,3 +18,22 @@ spring:
 # HTTP Server
 server:
   port: 8888
+  
+# Configuración general
+config:
+ general:
+  pagesize: 10
+ endpoint:
+  backautenticacion: http://localhost:90201
+
+#Configuraciones de seguridad
+security:
+ basic:
+  enabled: false
+ oauth2:
+  client:
+   clientId: fooClientId
+   clientSecret: secret
+   accessTokenUri: http://localhost:9020/auth/oauth/token
+   userAuthorizationUri: http://localhost:9020/auth/oauth/authorize
+  resource.userInfoUri: http://localhost:9020/auth/user/me
