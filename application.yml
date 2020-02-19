@@ -1,5 +1,5 @@
 spring:
- profiles: des
+ profiles: DES
  datasource:
   sqlScriptEncoding: UTF-8
  
@@ -11,9 +11,12 @@ security:
   client:
    clientId: fooClientId
    clientSecret: secret
-   accessTokenUri: http://localhost:9020/auth/oauth/token
-   userAuthorizationUri: http://localhost:9020/auth/oauth/authorize
-  resource.userInfoUri: http://localhost:9020/auth/user/me
+   accessTokenUri: ${config.endpoint.backautenticacion}/auth/oauth/token
+   userAuthorizationUri: ${config.endpoint.backautenticacion}/auth/oauth/authorize
+  resource:
+   userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
+   jwt:
+    key-value: 1234
   
 server:
  error:
@@ -22,7 +25,17 @@ server:
 config:
  endpoint:
   backautenticacion: http://localhost:9020
-  backadministracion: http://localhost:8080
-  frontadministracion: http://localhost:8083
-  frontautenticacion: http://localhost:8082
-  frontconfiguracion: http://localhost:8889
+  backadministracion: STO-BACK-ADMINISTRACION
+  frontadministracion: STO-FRONT-ADMINISTRACION
+  frontautenticacion: STO-FRONT-AUTENTICACION
+  frontconfiguracion: STO-FRONT-CONFIGURACION
+  backconfiguracion: STO-BACK-CONFIGURACION
+  eureka: http://localhost:8761
+  gateway: STO-GATEWAY
+  
+eureka:
+ instance:
+  initialStatus: UNKNOWN
+ client:
+  healthcheck:
+   enabled: true
