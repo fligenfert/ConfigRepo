@@ -1,0 +1,18 @@
+server:
+ port: 8083
+ servlet:
+  context-path: /
+ session:
+  cookie:
+   name: UISESSION
+
+spring:
+ application:
+  name: STO-FRONT-ADMINISTRACION
+  
+eureka:
+ instance:
+  virtualHostName: STO-FRONT-ADMINISTRACION
+  metadataMap:
+   appOwner: STO
+   description: Front de administración  
