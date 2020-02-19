@@ -1,0 +1,22 @@
+server:
+ port: 8889
+ servlet:
+  context-path: /
+ session:
+  cookie:
+   name: UISESSION
+   
+spring:
+ application:
+  name: STO-FRONT-CONFIGURACION
+  
+eureka:
+ instance:
+  virtualHostName: STO-FRONT-CONFIGURACION
+  metadataMap:
+   appOwner: STO
+   description: Front de configuración del STO
+   
+config:
+ connecttimeout: 60000
+ readtimeout: 3000
