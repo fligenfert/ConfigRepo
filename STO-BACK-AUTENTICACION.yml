@@ -4,6 +4,7 @@ server:
   context-path: /auth
   
 spring:
+ profiles: DES
  application:
   name: STO-BACK-AUTENTICACION
   
