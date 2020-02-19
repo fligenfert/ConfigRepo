@@ -1,27 +1,53 @@
+server:
+ port: 8888
+
 spring:
- profiles: des 
+ profiles: DES
+ application:
+  name: STO-BACK-CONFIGURACION
  h2:
   console:
    enabled: true
    path: /h2-console
  jpa:
   show-sql: true
-  hibernate:
-   ddl-auto: create-drop
  datasource:
   url: jdbc:h2:mem:confDb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
   username: sa
   password: 
   driver-class-name: org.h2.Driver
   sqlScriptEncoding: UTF-8
-  
-# HTTP Server
-server:
-  port: 8888
-  
+
+# Seguridad
+security.oauth2.resource.jwt.key-value: 1234
+
 # Configuración general
 config:
  general:
   pagesize: 10
- endpoint:
-  backautenticacion: http://localhost:9020
+  state: UP
+      
+# Configuración eureka
+eureka:
+ instance:
+  hostname: localhost
+  metadata-map:
+   appOwner: STO
+   description: Back de configuracion
+  virtual-host-name: STO-BACK-CONFIGURACION    
+ client:
+   serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
+   healthcheck: 
+      enabled: false 
+      
+
+# Propiedades para actuator info
+info:
+  app:
+    name: STO-BACK-CONFIGURACION
+    description: Back de configuracion
+    version: 0.0.1-SNAPSHOT
+  java-vendor: ${java.specification.vendor}
+  java-version: ${java.vm.name}
+  
